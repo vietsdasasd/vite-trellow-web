@@ -25,6 +25,7 @@ function Workspaces() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="demo-positioned-button-workspaces"
         aria-controls={open ? 'demo-positioned-menu-workspaces' : undefined}
         aria-haspopup="true"

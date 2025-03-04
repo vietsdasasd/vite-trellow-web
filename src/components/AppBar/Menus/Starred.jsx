@@ -21,6 +21,7 @@ function Starred() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="demo-positioned-button-starred"
         aria-controls={open ? 'demo-positioned-menu-starred' : undefined}
         aria-haspopup="true"
