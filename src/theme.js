@@ -1,5 +1,6 @@
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import { cyan, deepOrange, orange, teal } from '@mui/material/colors'
+import { Height } from '@mui/icons-material'
 
 // Create a theme instance.
 const theme = extendTheme({
@@ -11,7 +12,7 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        primary: { main: '#88a2ff' },
+        primary: { main: '#3598db' },
         secondary: deepOrange
       }
     },
@@ -23,6 +24,24 @@ const theme = extendTheme({
     }
   },
   components: {
+    MuiCssBaseline:{
+      styleOverrides:{
+        body:{
+          '*::-webkit-scrollbar':{
+            width: '8px',
+            height: '8px'
+          },
+          '*::-webkit-scrollbar-thumb':{
+            backgroundColor: '#95afc0',
+            borderRadius: '8px'
+          },
+          '*::-webkit-scrollbar-thumb:hover':{
+            backgroundColor: '#4834d4',
+            borderRadius: '8px'
+          }
+        }
+      }
+    },
     // Name of the component
     MuiButton: {
       styleOverrides: {
@@ -35,7 +54,7 @@ const theme = extendTheme({
     MuiInputLabel: {
       styleOverrides: {
         // Name of the slot
-        root: ({theme}) => ({
+        root: ({ theme }) => ({
           color: theme.palette.primary.main,
           fontSize: '0.875rem'
         })
